@@ -41,6 +41,142 @@ const farms: SerializedFarmConfig[] = [
    * V3 by order of release (some may be out of PID order due to multiplier boost)
    */
   {
+    pid: 495,
+    lpSymbol: 'WOOP-BNB LP',
+    lpAddresses: {
+      97: '',
+      56: '0x2AE94A6C768D59f5DDc25bd7f12C7cBE1D51dc04',
+    },
+    token: serializedTokens.woop,
+    quoteToken: serializedTokens.wbnb,
+  },
+  {
+    pid: 492,
+    lpSymbol: 'SDAO-BNB LP',
+    lpAddresses: {
+      97: '',
+      56: '0x43b95976cF0929478bC13332C9cd2D63Bf060976',
+    },
+    token: serializedTokens.sdao,
+    quoteToken: serializedTokens.wbnb,
+    isCommunity: true,
+  },
+  {
+    pid: 493,
+    lpSymbol: 'ANTEX-BUSD LP',
+    lpAddresses: {
+      97: '',
+      56: '0x4DcB7b3b0E8914DC0e6D366521604cD23E7991E1',
+    },
+    token: serializedTokens.antex,
+    quoteToken: serializedTokens.busd,
+    isCommunity: true,
+  },
+  {
+    pid: 494,
+    lpSymbol: 'BBT-BNB LP',
+    lpAddresses: {
+      97: '',
+      56: '0x3D5A3E3824da092851026fCda3D8a0B7438c4573',
+    },
+    token: serializedTokens.bbt,
+    quoteToken: serializedTokens.wbnb,
+    isCommunity: true,
+  },
+  {
+    pid: 491,
+    lpSymbol: 'HIGH-BUSD LP',
+    lpAddresses: {
+      97: '',
+      56: '0xe98ac95A1dB2fCaaa9c7D4ba7ecfCE4877ca2bEa',
+    },
+    token: serializedTokens.high,
+    quoteToken: serializedTokens.busd,
+  },
+  {
+    pid: 490,
+    lpSymbol: 'CCAR-BNB LP',
+    lpAddresses: {
+      97: '',
+      56: '0x845d301C864d48027DB73ec4394e6DDBE52Cbc39',
+    },
+    token: serializedTokens.ccar,
+    quoteToken: serializedTokens.wbnb,
+  },
+  {
+    pid: 489,
+    lpSymbol: 'DPT-BNB LP',
+    lpAddresses: {
+      97: '',
+      56: '0x141e9558f66Cc21c93628400cCa7d830c15c2c24',
+    },
+    token: serializedTokens.dpt,
+    quoteToken: serializedTokens.wbnb,
+  },
+  {
+    pid: 488,
+    lpSymbol: 'THG-BNB LP',
+    lpAddresses: {
+      97: '',
+      56: '0x486697ae24469cB1122F537924Aa46E705B142Aa',
+    },
+    token: serializedTokens.thg,
+    quoteToken: serializedTokens.wbnb,
+  },
+  {
+    pid: 485,
+    lpSymbol: 'TT-BUSD LP',
+    lpAddresses: {
+      97: '',
+      56: '0x6DA32849Fc5E1c23894d9E08166912F15bDb2E95',
+    },
+    token: serializedTokens.tt,
+    quoteToken: serializedTokens.busd,
+    isCommunity: true,
+  },
+  {
+    pid: 486,
+    lpSymbol: 'GMEE-BNB LP',
+    lpAddresses: {
+      97: '',
+      56: '0x6a24a877bb7D07fba59397DecBBAED5F92890AeA',
+    },
+    token: serializedTokens.gmee,
+    quoteToken: serializedTokens.wbnb,
+    isCommunity: true,
+  },
+  {
+    pid: 487,
+    lpSymbol: 'HTD-BUSD LP',
+    lpAddresses: {
+      97: '',
+      56: '0x0c3b12fCA25bfa840E0553DA97C532e9Abd3913d',
+    },
+    token: serializedTokens.htd,
+    quoteToken: serializedTokens.busd,
+    isCommunity: true,
+  },
+  {
+    pid: 484,
+    lpSymbol: 'IDIA-BUSD LP',
+    lpAddresses: {
+      97: '',
+      56: '0x71E6de81381eFE0Aa98f56b3B43eB3727D640715',
+    },
+    token: serializedTokens.idia,
+    quoteToken: serializedTokens.busd,
+  },
+  {
+    pid: 483,
+    lpSymbol: 'XCV-BUSD LP',
+    lpAddresses: {
+      97: '',
+      56: '0xD39F05AB936Aa201235005c47B83268f2d9833f8',
+    },
+    token: serializedTokens.xcv,
+    quoteToken: serializedTokens.busd,
+  },
+  {
     pid: 482,
     lpSymbol: 'NABOX-BUSD LP',
     lpAddresses: {

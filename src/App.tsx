@@ -9,8 +9,8 @@ import useScrollOnRouteChange from 'hooks/useScrollOnRouteChange'
 import { usePollBlockNumber } from 'state/block/hooks'
 import { usePollCoreFarmData } from 'state/farms/hooks'
 import { useFetchProfile } from 'state/profile/hooks'
-import { DatePickerPortal } from 'components/DatePicker'
 import { nftsBaseUrl } from 'views/Nft/market/constants'
+import SubgraphHealthIndicator from 'components/SubgraphHealthIndicator'
 import GlobalStyle from './style/Global'
 import Menu from './components/Menu'
 import SuspenseWithChunkError from './components/SuspenseWithChunkError'
@@ -30,6 +30,8 @@ import {
 import RedirectOldRemoveLiquidityPathStructure from './views/RemoveLiquidity/redirects'
 import { RedirectPathToSwapOnly, RedirectToSwap } from './views/Swap/redirects'
 import { useInactiveListener } from './hooks/useInactiveListener'
+import useSentryUser from './hooks/useSentryUser'
+import useNftClaimStatusCheck from './hooks/useNftClaimStatusCheck'
 
 // Route-based code splitting
 // Only pool is included in the main bundle because of it's the most visited page
@@ -72,6 +74,8 @@ const App: React.FC = () => {
   useScrollOnRouteChange()
   useUserAgent()
   useInactiveListener()
+  useSentryUser()
+  useNftClaimStatusCheck()
 
   return (
     <Router history={history}>
@@ -181,7 +185,7 @@ const App: React.FC = () => {
       </Menu>
       <EasterEgg iterations={2} />
       <ToastListener />
-      <DatePickerPortal />
+      <SubgraphHealthIndicator />
     </Router>
   )
 }

@@ -22,10 +22,15 @@ const useNewestNfts = () => {
         nftsFromSg.map((nft) => ({ collectionAddress: nft.collection.id, tokenId: nft.tokenId })),
       )
 
-      const nfts = nftsFromSg.map((nftFromSg, index) => {
-        const nftFromApi = nftsFromApi[index]
-        return { ...nftFromApi, marketData: nftFromSg }
-      })
+      const nfts = nftsFromSg
+        .map((nftFromSg) => {
+          const foundNftFromApi = nftsFromApi.find((nftFromApi) => nftFromApi.tokenId === nftFromSg.tokenId)
+          if (foundNftFromApi) {
+            return { ...foundNftFromApi, marketData: nftFromSg }
+          }
+          return null
+        })
+        .filter(Boolean)
       setNewestNfts(nfts)
     }
     fetchNewestNfts()
@@ -44,7 +49,7 @@ const Newest: React.FC = () => {
         <Heading>{t('Newest Arrivals')}</Heading>
         <Button
           as={Link}
-          to={`${nftsBaseUrl}/collections/`}
+          to={`${nftsBaseUrl}/activity/`}
           variant="secondary"
           scale="sm"
           endIcon={<ChevronRightIcon color="primary" />}

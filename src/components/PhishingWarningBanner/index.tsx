@@ -9,11 +9,11 @@ const Container = styled(Flex)`
   height: 100%;
   padding: 12px;
   align-items: center;
-  background: linear-gradient(0deg, rgba(39, 38, 44, 0.4), rgba(39, 38, 44, 0.4)),
-    linear-gradient(180deg, #8051d6 0%, #492286 100%);
+  background: linear-gradient(0deg, rgba(00, 44, 00, 0.4), rgba(00, 44, 00, 0.4)),
+    linear-gradient(180deg, #41a65b 0%, #0b5e20 100%);
   ${({ theme }) => theme.mediaQueries.md} {
     padding: 0px;
-    background: linear-gradient(180deg, #8051d6 0%, #492286 100%);
+    background: linear-gradient(180deg, #41a65b 0%, #0b5e20 100%);
   }
 `
 
@@ -25,7 +25,7 @@ const InnerContainer = styled(Flex)`
 `
 
 const SpeechBubble = styled.div`
-  background: rgba(39, 38, 44, 0.4);
+  background: rgba(00, 44, 00, 0.4);
   border-radius: 16px;
   padding: 8px;
   width: 60%;
@@ -44,8 +44,8 @@ const PhishingWarningBanner: React.FC = () => {
   const { t } = useTranslation()
   const [, hideBanner] = usePhishingBannerManager()
   const { isMobile, isMd } = useMatchBreakpoints()
-  const warningText = t("please make sure you're visiting https://pancakeswap.finance - check the URL carefully.")
-  const warningTextAsParts = warningText.split(/(https:\/\/pancakeswap.finance)/g)
+  const warningText = t("please make sure you're visiting https://s33d.app - check the URL carefully.")
+  const warningTextAsParts = warningText.split(/(https:\/\/s33d.app)/g)
   const warningTextComponent = (
     <>
       <Text as="span" color="warning" small bold textTransform="uppercase">

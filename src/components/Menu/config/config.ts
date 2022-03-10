@@ -6,64 +6,64 @@ export type ConfigMenuItemsType = MenuItemsType & { hideSubNav?: boolean }
 
 const config: (t: ContextApi['t']) => ConfigMenuItemsType[] = (t) => [
   {
-    label: t('Trade'),
+    label: t('Market'),
     icon: 'Swap',
     href: '/swap',
     showItemsOnMobile: false,
     items: [
       {
-        label: t('Exchange'),
+        label: t('Trade'),
         href: '/swap',
       },
       {
-        label: t('Liquidity'),
+        label: t('Supply'),
         href: '/liquidity',
       },
     ],
   },
+  // {
+  //   label: t('Earn'),
+  //   href: '/farms',
+  //   icon: 'Earn',
+  //   items: [
+  //     {
+  //       label: t('Farms'),
+  //       href: '/farms',
+  //     },
+  //     {
+  //       label: t('Pools'),
+  //       href: '/pools',
+  //     },
+  //   ],
+  // },
+  // {
+  //   label: t('Win'),
+  //   href: '/prediction',
+  //   icon: 'Trophy',
+  //   items: [
+  //     {
+  //       label: t('Prediction (BETA)'),
+  //       href: '/prediction',
+  //     },
+  //     {
+  //       label: t('Lottery'),
+  //       href: '/lottery',
+  //     },
+  //   ],
+  // },
   {
-    label: t('Earn'),
-    href: '/farms',
-    icon: 'Earn',
-    items: [
-      {
-        label: t('Farms'),
-        href: '/farms',
-      },
-      {
-        label: t('Pools'),
-        href: '/pools',
-      },
-    ],
-  },
-  {
-    label: t('Win'),
-    href: '/prediction',
-    icon: 'Trophy',
-    items: [
-      {
-        label: t('Prediction (BETA)'),
-        href: '/prediction',
-      },
-      {
-        label: t('Lottery'),
-        href: '/lottery',
-      },
-    ],
-  },
-  {
-    label: t('NFT'),
+    label: t('Initiatives'),
     href: `${nftsBaseUrl}`,
     icon: 'Nft',
     items: [
-      {
-        label: t('Overview'),
-        href: `${nftsBaseUrl}`,
-      },
-      {
-        label: t('Collections'),
-        href: `${nftsBaseUrl}/collections`,
-      },
+      // {
+      //   label: t('Overview'),
+      //   href: `${nftsBaseUrl}`,
+      // },
+      // {
+      //   label: t('Collections'),
+      //   href: `${nftsBaseUrl}/collections`,
+      // },
     ],
   },
   {
@@ -80,17 +80,17 @@ const config: (t: ContextApi['t']) => ConfigMenuItemsType[] = (t) => [
         label: t('IFO'),
         href: '/ifo',
       },
-      {
-        label: t('Voting'),
-        href: '/voting',
-      },
-      {
-        type: DropdownMenuItemType.DIVIDER,
-      },
-      {
-        label: t('Leaderboard'),
-        href: '/teams',
-      },
+      // {
+      //   label: t('Voting'),
+      //   href: '/voting',
+      // },
+      // {
+      //   type: DropdownMenuItemType.DIVIDER,
+      // },
+      // {
+      //   label: t('Leaderboard'),
+      //   href: '/teams',
+      // },
       {
         type: DropdownMenuItemType.DIVIDER,
       },
